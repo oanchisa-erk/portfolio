@@ -45,7 +45,11 @@ const Portfolio = () => {
           githubLink="https://drive.google.com/file/d/1_PWhrpLUUoydS2iakXcmTZxEZo6OIAzu/view?usp=sharing"
         />
 
-        <div className="flex flex-wrap -mx-2">
+        <div className="flex flex-wrap -mx-2 
+        xl:pb-0
+        lg:pb-0
+        md:pb-16
+        sm:pb-16">
           <ProjectCard
             title="POS System Simulation"
             description="Simulated a POS system using Python and NFC reader to read student ID cards, manage wallet balances, and accumulate points for rewards."

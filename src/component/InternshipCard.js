@@ -23,11 +23,18 @@ const InternshipCard = ({
   "
       >
         {/* LEFT CONTENT */}
-        <div className="flex flex-col justify-center w-full lg:w-auto px-6 lg:px-0 sm:mb-10">
+        <div className="flex flex-col justify-center w-full px-6 
+        lg:w-auto lg:px-0 lg:mt-0
+        md:mt-0
+        sm:mb-10 sm:mt-20">
           <div
             className="text-white
-            2xl:text-[28px] xl:text-[24px] lg:text-[22px] md:text-[20px]
-            sm:text-[18px] text-[16px] font-semibold"
+            2xl:text-[28px] 
+            xl:text-[24px] 
+            lg:text-[22px] 
+            md:text-[20px]
+            sm:text-[18px] 
+            text-[16px] font-semibold"
           >
             Internship (Software Engineer)
           </div>
@@ -45,15 +52,22 @@ const InternshipCard = ({
             <img
               src={detailImage}
               className="opacity-70 w-full
-                2xl:h-[300px] xl:h-[260px] lg:h-[240px]
-                md:h-[90%] sm:h-[220px]"
+                2xl:h-[300px] 
+                xl:h-[260px] 
+                lg:h-[240px]
+                md:h-[90%]
+                sm:h-[220px]"
             />
 
             <div
               className="absolute inset-0 flex flex-col justify-center text-white
-                2xl:text-[20px] xl:text-[18px] lg:text-[16px]
-                md:text-[15px] sm:text-[14px] text-[13px]
-                font-medium px-8 py-10"
+                2xl:text-[20px]
+                xl:text-[18px]
+                lg:text-[16px]
+                md:text-[15px]
+                sm:text-[12px] 
+                text-[13px]
+                font-medium p-8"
             >
               <ul className="list-disc list-inside space-y-3">
                 {description.map((item, idx) => (
@@ -63,8 +77,11 @@ const InternshipCard = ({
 
               <button
                 className="w-1/3 bg-yellow-1000 font-semibold
-                  2xl:text-[17px] xl:text-[15px] lg:text-[14px]
-                  md:text-[14px] sm:text-[13px] text-[12px]
+                  2xl:text-[17px] 
+                  xl:text-[15px] 
+                  lg:text-[14px]
+                  md:text-[14px] 
+                  sm:text-[12px]
                   text-black py-2 px-8 rounded-xl mt-8"
               >
                 <a href={link} target="_blank" rel="noopener noreferrer">
