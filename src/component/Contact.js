@@ -16,7 +16,6 @@ const Contact = () => {
         font-inter
       "
     >
-      {/* Title */}
       <div className="
         font-bold
         text-[36px] 
@@ -30,69 +29,75 @@ const Contact = () => {
         Contact
       </div>
 
-      {/* Contact Items */}
       <div className="
         flex flex-col 
-        gap-6 
-        sm:gap-8 
+        gap-4
+        sm:gap-6 
+        md:gap-8 
         md:flex-row 
         md:justify-between
-        text-[15px]
-        sm:text-[16px]
+        text-[14px]
+        sm:text-[15px]
         md:text-[16px]
         lg:text-[20px]
         xl:text-[22px]
         2xl:text-[24px]
       ">
-        {/* Email */}
         <div className="
           flex items-center 
-          gap-3 
-          sm:gap-4
+          gap-2
+          sm:gap-3 
+          md:gap-4
         ">
           <MdOutlineEmail className="
             text-yellow-1000
-            text-[24px]
-            sm:text-[28px]
-            md:text-[30px]
-            lg:text-[32px]
-            xl:text-[34px]
+            text-[20px]
+            sm:text-[24px]
+            md:text-[28px]
+            lg:text-[30px]
+            xl:text-[32px]
+            2xl:text-[34px]
+            flex-shrink-0
           " />
-          <a href="mailto:Oanchisa.nn@gmail.com" className="hover:underline">
+          <a href="mailto:Oanchisa.nn@gmail.com" className="hover:underline break-all sm:break-normal">
             Oanchisa.nn@gmail.com
           </a>
         </div>
 
-        {/* Phone */}
         <div className="
           flex items-center 
-          gap-3 
-          sm:gap-4
+          gap-2
+          sm:gap-3 
+          md:gap-4
         ">
           <FaPhoneAlt className="
             text-yellow-1000
-            text-[24px]
-            sm:text-[28px]
-            md:text-[30px]
-            lg:text-[32px]
-            xl:text-[34px]
+            text-[20px]
+            sm:text-[24px]
+            md:text-[28px]
+            lg:text-[30px]
+            xl:text-[32px]
+            2xl:text-[34px]
+            flex-shrink-0
           " />
           <span>+66 625-301-526</span>
         </div>
 
-        {/* Instagram */}
         <div className="
           flex items-center 
-          gap-3 
-          sm:gap-4
+          gap-2
+          sm:gap-3 
+          md:gap-4
         ">
           <FaInstagram className="
             text-yellow-1000
-            text-[24px]
-            sm:text-[28px]
-            md:text-[30px]
-            lg:text-[32px]
-            xl:text-[34px]
+            text-[20px]
+            sm:text-[24px]
+            md:text-[28px]
+            lg:text-[30px]
+            xl:text-[32px]
+            2xl:text-[34px]
+            flex-shrink-0
           " />
           <a
             href="https://www.instagram.com/onegvbxd_/"

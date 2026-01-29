@@ -13,15 +13,17 @@ import debt from "../Image/Debt.png";
 const Portfolio = () => {
   return (
     <section id="portfolio" className="flex flex-col w-full font-inter">
-      <div className="p-16 items-center">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 items-center">
         <div
           className="text-white 
         2xl:text-[68px] 
         xl:text-[64px] 
         lg:text-[60px] 
         md:text-[54px]
-        sm:text-[48px]  
-        font-bold"
+        sm:text-[48px]
+        text-[36px]
+        font-bold
+        mb-6 sm:mb-8 md:mb-10"
         >
           Project Experience
         </div>
@@ -45,11 +47,12 @@ const Portfolio = () => {
           githubLink="https://drive.google.com/file/d/1_PWhrpLUUoydS2iakXcmTZxEZo6OIAzu/view?usp=sharing"
         />
 
-        <div className="flex flex-wrap -mx-2 
+        <div className="flex flex-col sm:flex-row flex-wrap -mx-2 
         xl:pb-0
         lg:pb-0
         md:pb-16
-        sm:pb-16">
+        sm:pb-12
+        pb-8">
           <ProjectCard
             title="POS System Simulation"
             description="Simulated a POS system using Python and NFC reader to read student ID cards, manage wallet balances, and accumulate points for rewards."

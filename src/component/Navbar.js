@@ -19,12 +19,23 @@ const Navbar = () => {
     setOpen(false);
   };
 
+  const handleScrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setActive("home");
+    setOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-black text-white font-extrabold font-inter z-50">
-      <div className="mx-6 my-4 flex items-center justify-between">
-        <div className="text-2xl font-bold">Portfolio</div>
+      <div className="mx-4 sm:mx-6 my-3 sm:my-4 flex items-center justify-between">
+        <div 
+          className="text-lg sm:text-xl md:text-2xl font-bold cursor-pointer hover:opacity-80 transition-opacity"
+          onClick={handleScrollToTop}
+        >
+          Oanchisa
+        </div>
 
-        {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-4">
           {menuItem.map((item) => (
             <a
@@ -50,28 +61,34 @@ const Navbar = () => {
           <DownloadResume />
         </div>
 
-        {/* Mobile hamburger */}
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
-          <div className="w-6 h-1 bg-white mb-1"></div>
-          <div className="w-6 h-1 bg-white mb-1"></div>
-          <div className="w-6 h-1 bg-white"></div>
+        <button 
+          className="md:hidden p-2 -mr-2" 
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          <div className={`w-6 h-0.5 bg-white mb-1.5 transition-all ${open ? 'rotate-45 translate-y-2' : ''}`}></div>
+          <div className={`w-6 h-0.5 bg-white mb-1.5 transition-all ${open ? 'opacity-0' : ''}`}></div>
+          <div className={`w-6 h-0.5 bg-white transition-all ${open ? '-rotate-45 -translate-y-2' : ''}`}></div>
         </button>
       </div>
 
-      {/* Mobile dropdown */}
       {open && (
-        <div className="md:hidden flex flex-col bg-black px-6 pb-4 gap-3">
+        <div className="md:hidden flex flex-col bg-black px-4 sm:px-6 pb-4 gap-2 sm:gap-3 border-t border-white/10">
           {menuItem.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
               onClick={handleScrollTo(item.id)}
-              className="py-2 border-b border-white/20"
+              className={`py-3 sm:py-2 border-b border-white/20 text-sm sm:text-base transition
+                ${active === item.id ? 'text-yellow-1000' : ''}
+              `}
             >
               {item.label}
             </a>
           ))}
-          <DownloadResume />
+          <div className="pt-2">
+            <DownloadResume />
+          </div>
         </div>
       )}
     </nav>

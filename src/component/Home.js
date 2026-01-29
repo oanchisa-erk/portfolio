@@ -17,17 +17,17 @@ const Home = () => {
 
         w-full
         flex flex-col items-center text-center
-        font-inter sm:px-10
+        font-inter px-4 sm:px-6 md:px-10
 
         lg:flex-row
         lg:items-center
         lg:text-left
 
         font-inter
+        pt-8 sm:pt-12 md:pt-16 lg:pt-0
       "
     >
-      {/* Left */}
-      <div className="relative flex items-center justify-center w-full h-auto inline-block md:mb-10">
+      <div className="relative flex items-center justify-center w-full h-auto inline-block mb-8 sm:mb-10 md:mb-10 lg:mb-0">
         <img
           src={bgProfile}
           alt="bgProfile"
@@ -38,33 +38,33 @@ const Home = () => {
             xl:w-[500px]
             lg:w-[420px]
             md:w-[340px]
-            sm:w-[300px]
+            sm:w-[250px]
+            w-[200px]
 
             max-w-[540px]
-            sm:mt-64 lg:mt-0 xl:mt-0 2xl:mt-0
+            mt-32 sm:mt-48 md:mt-64 lg:mt-0 xl:mt-0 2xl:mt-0
           "
         />
         <img
           src={me}
           alt="me"
           className="
-            absolute pl-3
+            absolute pl-2 sm:pl-3
 
             2xl:w-[600px]
             xl:w-[540px]
             lg:w-[440px]
             md:w-[360px]
             sm:w-[340px]
+            w-[280px]
 
             max-w-[600px]
-            sm:mt-[300px] lg:mt-0 xl:mt-0 2xl:mt-0
+            mt-[180px] sm:mt-[240px] md:mt-[300px] lg:mt-0 xl:mt-0 2xl:mt-0
           "
         />
       </div>
 
-      {/* Right */}
-      <div className="w-full flex flex-col justify-start text-center lg:text-left">
-        {/* Intro Text */}
+      <div className="w-full flex flex-col justify-start text-center lg:text-left px-2 sm:px-4 md:px-0">
         <div
           className="
             text-white font-semibold
@@ -74,10 +74,10 @@ const Home = () => {
             lg:text-[60px]
             md:text-[52px]
             sm:text-[44px]
-            text-[36px]
+            text-[32px]
 
-            -mb-8
-            sm:mt-[280px] lg:mt-0 xl:mt-0 2xl:mt-0
+            -mb-4 sm:-mb-6 md:-mb-8
+            mt-[200px] sm:mt-[280px] md:mt-[280px] lg:mt-0 xl:mt-0 2xl:mt-0
           "
         >
           Hi, I'm
@@ -92,10 +92,10 @@ const Home = () => {
             lg:text-[70px]
             md:text-[60px]
             sm:text-[50px]
-            text-[42px]
+            text-[38px]
 
-            -mb-8
-            sm:mt-4 lg:mt-0 xl:mt-0 2xl:mt-0
+            -mb-4 sm:-mb-6 md:-mb-8
+            mt-2 sm:mt-4 lg:mt-0 xl:mt-0 2xl:mt-0
           "
         >
           Oanchisa
@@ -110,16 +110,15 @@ const Home = () => {
             lg:text-[46px]
             md:text-[40px]
             sm:text-[34px]
-            text-[28px]
+            text-[26px]
 
-            mb-5
-            sm:mt-4 lg:mt-0 xl:mt-0 2xl:mt-0
+            mb-4 sm:mb-5
+            mt-2 sm:mt-4 lg:mt-0 xl:mt-0 2xl:mt-0
           "
         >
           a Frontend Developer
         </div>
 
-        {/* Description */}
         <p
           className="
             text-white
@@ -129,9 +128,10 @@ const Home = () => {
             lg:text-[20px]
             md:text-[18px]
             sm:text-[16px]
-            text-[15px]
+            text-[14px]
 
-            mb-5
+            mb-4 sm:mb-5
+            px-2 sm:px-0
           "
         >
           Previously worked with Infuse — passionate about learning beyond the
@@ -139,11 +139,11 @@ const Home = () => {
           expertise through hands-on projects.
         </p>
 
-        {/* Resume Button */}
         <a
           href="https://drive.google.com/file/d/1ZPDIPx_UObC2nJ2Lq7fV7M2UzbHUoulA/view"
           target="_blank"
           rel="noopener noreferrer"
+          className="self-center lg:self-start"
         >
           <button
             className="
@@ -156,29 +156,29 @@ const Home = () => {
               sm:text-[13px]
               text-[12px]
 
-              p-3 rounded-xl mt-4 mb-5
+              px-4 py-2 sm:p-3 rounded-xl mt-2 sm:mt-4 mb-4 sm:mb-5
+              w-full sm:w-auto
             "
           >
             View Resume
           </button>
         </a>
 
-        {/* Skills */}
-        <div className="flex w-full flex-wrap md:justify-center lg:justify-start sm:justify-center">
+        <div className="flex w-full flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-4 sm:mb-0">
           {skills.map((skill) => (
             <div
               key={skill}
               className="
                 bg-purple-1100/20 text-white
                 font-light border border-purple-1100
-                rounded-3xl px-5 py-1 mr-4 mb-3
+                rounded-3xl px-3 py-1 sm:px-4 sm:py-1 md:px-5 mb-2 sm:mb-3
 
                 2xl:text-[20px]
                 xl:text-[18px]
                 lg:text-[16px]
                 md:text-[14px]
                 sm:text-[12px]
-                text-[10px]
+                text-[11px]
               "
             >
               {skill}
